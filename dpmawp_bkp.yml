@@ -13,7 +13,7 @@
          
      - name: Delete file After Backup
        win_file:
-         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
+         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
          state: absent
 
      - name: Copy webpost file
