@@ -8,7 +8,6 @@
        win_copy:
          src: /home/ubuntu/source/{{ webpost_file }}
          dest: "{{ item }}"
-         when: webpost_file == 'tfr_wplmiregistrydata.asp' or 'tfr_wplmihostregrel.asp'
        with_items:
          - "{{ dpmawp.destination3 }}"
          - "{{ dpmawp.destination4 }}"
