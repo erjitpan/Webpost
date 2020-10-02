@@ -6,7 +6,7 @@
          webpost_file: "{{ webpost_file }}"
 
      - name: Copy file to Backup location
-       copy:
+       win_copy:
          src: "{{ dpmawp.destination3 }}{{ webpost_file }}"
          dest: C:\\Websites\\Backup\\
 
