@@ -7,7 +7,7 @@
 
      - name: Copy file to Backup location
        win_copy:
-         src: "C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}"
+         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
 
