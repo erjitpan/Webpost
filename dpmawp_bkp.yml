@@ -7,10 +7,8 @@
 
      - name: Copy file to Backup location
        copy:
-         src: "{{ item }}{{webpost_file }}"
+         src: "{{ dpmawp.destination3 }}"
          dest: C:\Websites\Backup\
-       with_items:
-         - "{{ dpmawp.destination3 }}"
 
      - name: Copy webpost file
        win_copy:
