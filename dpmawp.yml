@@ -8,6 +8,7 @@
        win_copy:
          src: /home/ubuntu/source/{{ webpost_file }}
          dest: "{{ item }}"
+         remote_src: True
        with_items:
          - "{{ dpmawp.destination3 }}"
          - "{{ dpmawp.destination4 }}"
