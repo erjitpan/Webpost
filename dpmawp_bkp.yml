@@ -11,7 +11,6 @@
          dest: C:\Websites\Backup\
        with_items:
          - "{{ dpmawp.destination3 }}"
-         - "{{ dpmawp.destination4 }}"
 
      - name: Copy webpost file
        win_copy:
