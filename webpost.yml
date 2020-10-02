@@ -6,9 +6,8 @@
          webpost_file: "{{ webpost_file }}"
      - name: Copy webpost file
        win_copy:
-         src: /home/ubuntu/source/{{ webpost_file }}
+         src: /var/lib/jenkins/workspace/Webpost/{{ webpost_file }}
          dest: "{{ item }}"
-       when: webpost_file == 'tfr_wplmiregistrydata.asp' or 'tfr_wplmihostregrel.asp'
        with_items:
          - "{{ webpost.destination1 }}"
          - "{{ webpost.destination2 }}"
