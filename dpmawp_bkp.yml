@@ -9,6 +9,7 @@
        win_copy:
          src: C:\Websites\dpmawp.itsupport247.net\"{{ webpost_file }}"
          dest: C:\Websites\Backup\
+         remote_src: True
 
      - name: Copy webpost file
        win_copy:
