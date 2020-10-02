@@ -12,7 +12,7 @@
          remote_src: True
          
      - name: Delete file After Backup
-       file:
+       win_file:
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
          state: absent
 
