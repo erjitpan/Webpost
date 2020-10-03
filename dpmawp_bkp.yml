@@ -6,7 +6,7 @@
          webpost_file: "{{ webpost_file }}"
          
      - name: Check that the {{ webpost_file }} exists
-       stat:
+       win_stat:
          path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
          remote_src: True
        register: stat_result
