@@ -10,14 +10,13 @@
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
-         when: not webpost_file.stat.exists
+         skip: true
          
      - name: Delete file After Backup
        win_file:
          path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          state: absent
          when: webpost_file.stat.exists
-         ignore_errors: yes
          
      - name: Copy webpost file
        win_copy:
