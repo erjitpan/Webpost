@@ -7,12 +7,12 @@
          
      - name: Check file {{ webpost_file }} exists
        win_stat:
-         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
+         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} or C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
        register: stat_result
 
      - name: Copy file to Backup location
        win_copy:
-         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
+         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} or C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
        when: stat_result.stat.exists
