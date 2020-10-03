@@ -8,9 +8,10 @@
      - name: Copy file to Backup location
        win_copy:
          path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
-         register: src
-         dest: C:\Websites\Backup\
-         when: src.stat.exists
+         register: paths
+         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
+         dest: C:\Websites\Backup\         
+         when: paths.stat.exists
          remote_src: True
  
          
