@@ -12,10 +12,11 @@
 
      - name: Copy file to Backup location
        win_copy:
-         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
-         dest: C:\Websites\Backup\         
+         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
+         dest: C:\Websites\Backup\
+       when: stat_result.stat.exists
          remote_src: True
-         when: stat_result.stat.exists
+
  
          
      - name: Delete file After Backup
