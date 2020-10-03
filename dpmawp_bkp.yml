@@ -9,7 +9,9 @@
        win_copy:
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
+         when: {{ webpost_file }}.stat.exists
          remote_src: True
+ 
          
      - name: Delete file After Backup
        win_file:
