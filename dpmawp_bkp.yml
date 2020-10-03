@@ -10,7 +10,6 @@
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
-         skip: true
          
      - name: Delete file After Backup
        win_file:
