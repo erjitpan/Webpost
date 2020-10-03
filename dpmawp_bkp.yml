@@ -10,7 +10,7 @@
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
-         when: webpost_file.stat.exists == true
+         when: not webpost_file.stat.exists
          
      - name: Delete file After Backup
        win_file:
