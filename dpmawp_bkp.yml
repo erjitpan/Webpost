@@ -8,7 +8,6 @@
      - name: Check that the {{ webpost_file }} exists
        win_stat:
          path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
-         remote_src: True
        register: stat_result
 
      - name: Copy file to Backup location
