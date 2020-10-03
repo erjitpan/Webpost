@@ -7,13 +7,13 @@
 
      - name: Copy file to Backup location
        win_copy:
-         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
+         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
          remote_src: True
          
      - name: Delete file After Backup
        win_file:
-         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
+         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          state: absent
 
      - name: Copy webpost file
