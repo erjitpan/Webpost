@@ -7,7 +7,7 @@
          
      - name: Check file {{ webpost_file }} exists
        win_stat:
-         path: 'C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}' or 'C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}'
+         path: 'C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}' || 'C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}'
        register: stat_result
 
      - name: Copy file to Backup location
