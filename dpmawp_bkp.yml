@@ -15,10 +15,8 @@
          src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }}
          dest: C:\Websites\Backup\
        when: stat_result.stat.exists
-         remote_src: True
+         #remote_src: True
 
- 
-         
      - name: Delete file After Backup
        win_file:
          path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
