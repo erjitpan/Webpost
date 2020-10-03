@@ -7,7 +7,7 @@
 
      - name: Copy file to Backup location
        win_copy:
-         src: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
+         path: C:\Websites\dpmawp.itsupport247.net\{{ webpost_file }} and C:\Websites\http.dpmawp.itsupport247.net\{{ webpost_file }}
          register: src
          dest: C:\Websites\Backup\
          when: src.stat.exists
