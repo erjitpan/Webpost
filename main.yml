@@ -1,7 +1,8 @@
 ---
--  hosts: all
-   roles:
-     - role: webpost.yml
-       webpost_file: "{{ webpost_file }}"
-
-   
+- hosts: webservers
+  tasks:
+    - name: Include the some_role role
+      include_role:
+        name: webpost.yml
+      vars:
+        webpost_file: "{{ webpost_file }}"
