@@ -4,6 +4,9 @@
      - include_vars: vars.yml
        vars:
          webpost_file: "{{ webpost_file }}"
-   roles:
-     - { role: webpost.yml, webpost_file: "{{ webpost_file }}" }
+     - include_role:
+         - name: include_role
+       vars:
+         webpost_file: "{{ webpost_file }}"
+
    
