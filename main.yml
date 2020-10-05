@@ -4,6 +4,7 @@
      - include_vars: vars.yml
        vars:
          webpost_file: "{{ webpost_file }}"
+         webpost_file_new: ''
    roles:
      - { role: webpost.yml, webpost_file_new: webpost_file, when: webpost_file == 'tfr_wpagthealthchkaction.asp' }
    
