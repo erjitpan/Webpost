@@ -2,7 +2,6 @@
 -  hosts: all
    roles:
      - role: webpost.yml
-         vars:
-           webpost_file: "{{ webpost_file }}"
+       webpost_file: "{{ webpost_file }}"
 
    
