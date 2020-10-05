@@ -2,11 +2,11 @@
 -  hosts: webpost
    tasks:
      - include_vars: vars.yml
-       #vars:
-         #webpost_file: "{{ webpost_file }}"
+       vars:
+         webpost_file: "{{ webpost_file_new }}"
      - name: Copy webpost file
        win_copy:
-         src: /var/lib/jenkins/workspace/Webpost/{{ webpost_file }}
+         src: /var/lib/jenkins/workspace/Webpost/{{ webpost_file_new }}
          dest: "{{ item }}"
        with_items:
          - "{{ webpost.destination1 }}"
