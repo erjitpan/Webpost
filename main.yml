@@ -4,9 +4,6 @@
      - include_vars: vars.yml
        vars:
          webpost_file: "{{ webpost_file }}"
-     - include_role:
-         - name: "webpost.yml"
-       vars:
-         webpost_file: "{{ webpost_file }}"
+     - include: someplaybook.yml webpost_file="{{ webpost_file }}" }}"
 
    
