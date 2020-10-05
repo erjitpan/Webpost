@@ -5,5 +5,5 @@
        vars:
          webpost_file: "{{ webpost_file }}"
    roles:
-     - { role: webpost, when: webpost_file == 'tfr_wpagthealthchkaction.asp' }
+     - { role: webpost.yml, when: {{ webpost_file }} == 'tfr_wpagthealthchkaction.asp' }
    
