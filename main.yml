@@ -1,0 +1,9 @@
+---
+-  hosts: all
+   tasks:
+     - include_vars: vars.yml
+       vars:
+         webpost_file: "{{ webpost_file }}"
+   roles:
+     - { role: webpost, when: "{{ webpost_file }}" == 'tfr_wplmihostregrel.asp' or "{{ webpost_file }}" == 'oldtfr_wpmalwrtemplateinfo.asp' or "{{ webpost_file }}" == 'prf_datastatus.asp' or "{{ webpost_file }}" == 'prf_datasync.asp' or "{{ webpost_file }}" == 'tfr_wp16gbexchng.asp' or "{{ webpost_file }}" == 'tfr_wpacpmsusddapp.asp' or "{{ webpost_file }}" == 'tfr_wpacpmsusddappextended.asp' or "{{ webpost_file }}" == 'tfr_wpadddevstatus.asp' or "{{ webpost_file }}" == 'tfr_wpaddlogondetail.asp' or "{{ webpost_file }}" == 'tfr_wpaddoninstchk.asp' or "{{ webpost_file }}" == 'tfr_wpadvnmsperfmondata.asp' or "{{ webpost_file }}" == 'tfr_wpagentschedules.asp' or "{{ webpost_file }}" == 'tfr_wpagentuninstallpid.asp' or "{{ webpost_file }}" == 'tfr_wpagntalive.asp' or "{{ webpost_file }}" == 'tfr_wpwebrootAPI.asp' or "{{ webpost_file }}" == 'tfr_wplmihostregrel.asp' }
+     - { role: dpmawp, when: "{{ webpost_file }}" == 'tfr_wplmihostregrel.asp' or "{{ webpost_file }}" == 'oldtfr_wpmalwrtemplateinfo.asp' or "{{ webpost_file }}" == 'prf_datastatus.asp' or "{{ webpost_file }}" == 'prf_datasync.asp' or "{{ webpost_file }}" == 'tfr_wp16gbexchng.asp' or "{{ webpost_file }}" == 'tfr_wpacpmsusddapp.asp' or "{{ webpost_file }}" == 'tfr_wpacpmsusddappextended.asp' or "{{ webpost_file }}" == 'tfr_wpadddevstatus.asp' or "{{ webpost_file }}" == 'tfr_wpaddlogondetail.asp' or "{{ webpost_file }}" == 'tfr_wpaddoninstchk.asp' or "{{ webpost_file }}" == 'tfr_wpadvnmsperfmondata.asp' or "{{ webpost_file }}" == 'tfr_wpagentschedules.asp' or "{{ webpost_file }}" == 'tfr_wpagentuninstallpid.asp' or "{{ webpost_file }}" == 'tfr_wpagntalive.asp' or "{{ webpost_file }}" == 'tfr_wpwebrootAPI.asp' or "{{ webpost_file }}" == 'tfr_wplmihostregrel.asp' }
