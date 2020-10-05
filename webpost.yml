@@ -3,10 +3,10 @@
    tasks:
      - include_vars: vars.yml
        vars:
-         webpost_file: "{{ webpost_file_new }}"
+         webpost_file: "{{ webpost_file }}"
      - name: Copy webpost file
        win_copy:
-         src: /var/lib/jenkins/workspace/Webpost/{{ webpost_file_new }}
+         src: /var/lib/jenkins/workspace/Webpost/{{ webpost_file }}
          dest: "{{ item }}"
        with_items:
          - "{{ webpost.destination1 }}"
