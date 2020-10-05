@@ -6,5 +6,5 @@
          webpost_file: "{{ webpost_file }}"
    dependencies:
      - role: webpost.yml
-       role_param: "{{ webpost_file }}"
+       webpost_file: "{{ webpost_file }}"
    
