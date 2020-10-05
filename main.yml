@@ -1,5 +1,5 @@
 ---
--  hosts: webpost
+-  hosts: all
    tasks:
      - include_vars: vars.yml
        vars:
