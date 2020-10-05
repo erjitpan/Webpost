@@ -5,6 +5,6 @@
        vars:
          webpost_file: "{{ webpost_file }}"
    roles:
-     - { role: webpost.yml, vars: { webpost_file: {{ webpost_file }} } }
+     - { role: webpost.yml, vars: { webpost_file: 'webpost_file' } }
 
    
